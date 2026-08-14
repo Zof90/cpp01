@@ -5,44 +5,40 @@
 #                                                     +:+ +:+         +:+      #
 #    By: schouite <schouite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/08/11 15:56:54 by schouite          #+#    #+#              #
-#    Updated: 2026/08/12 14:30:35 by schouite         ###   ########.fr        #
+#    Created: 2026/08/14 16:02:39 by schouite          #+#    #+#              #
+#    Updated: 2026/08/14 17:35:21 by schouite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-## ARGUMENTS
+## Arguments
 
-NAME = Account
+NAME = zombie
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 ## DIR
 
+SRC_DIR = src
+OBJ_DIR = obj
 INCLUDES = -Iincludes
-SRC_DIR = srcs
-OBJ_DIR = objs
 
 ## FILES
 
-HEADER = includes/Account.hpp
-CFILES = $(SRC_DIR)/fileName.cpp
-OFILES = $(CFILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)%.o)
+CFILES = $(SRC_DIR)/main.cpp $(SRC_DIR)/Zombie.cpp $(SRC_DIR)/newZombie.cpp $(SRC_DIR)/randomChump.cpp
+OFILES = $(CFILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+HEADER = includes/Zombie.hpp
 
-## RULES
+## Rules
+
 all: $(NAME)
-$(NAME): $(OFILES) 
+$(NAME): $(OFILES)
 	$(CXX) $(CXXFLAGS) $(OFILES) -o $(NAME)
-
-$(OBJ_DIR)/%.o $(HEADER): $(SRC_DIR)/%.cpp
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADER)
 	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
-
 clean:
-	rm -rf $(OBJ_DIR)
-
+	@rm -rf $(OBJ_DIR)
 fclean: clean
-	rm -r $(NAME)
-
+	@rm -r $(NAME)
 re: fclean all
-
 .PHONY: all clean fclean re
