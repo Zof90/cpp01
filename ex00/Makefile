@@ -6,7 +6,7 @@
 #    By: schouite <schouite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/14 16:02:39 by schouite          #+#    #+#              #
-#    Updated: 2026/08/14 17:35:21 by schouite         ###   ########.fr        #
+#    Updated: 2026/08/17 12:24:28 by schouite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,6 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADER)
 clean:
 	@rm -rf $(OBJ_DIR)
 fclean: clean
-	@rm -r $(NAME)
+	@rm -f $(NAME)
 re: fclean all
 .PHONY: all clean fclean re
