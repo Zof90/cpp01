@@ -1,4 +1,5 @@
 *.o
+.clangd
 obj/
 a.out
 proto
