@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   humanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/20 11:24:55 by schouite          #+#    #+#             */
-/*   Updated: 2026/08/20 13:58:03 by schouite         ###   ########.fr       */
+/*   Created: 2026/08/20 12:59:14 by schouite          #+#    #+#             */
+/*   Updated: 2026/08/20 16:49:10 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-#include <string>
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-class Weapon
+# include "Weapon.hpp"
+# include <string>
+
+class HumanB
 {
-    public:
-        Weapon(const std::string &weapon);
-        ~Weapon();
-        const std::string& getType() const;
-        void setType(const std::string &type);
-        void attack(void);
-    private:
-        std::string _weapon;
-       
+  public:
+	HumanB(const std::string &name);
+	~HumanB();
+	void attack() const;
+    void setWeapon(Weapon &weapon);
+
+  private:
+	std::string _name;
+	Weapon *_weaponPtr;
 };
+
 #endif

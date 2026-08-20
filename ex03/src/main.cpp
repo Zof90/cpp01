@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/19 14:08:30 by schouite          #+#    #+#             */
-/*   Updated: 2026/08/19 17:42:31 by schouite         ###   ########.fr       */
+/*   Created: 2026/08/20 11:30:59 by schouite          #+#    #+#             */
+/*   Updated: 2026/08/20 16:51:34 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int	main(void)
 {

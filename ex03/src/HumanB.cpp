@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/20 11:24:55 by schouite          #+#    #+#             */
-/*   Updated: 2026/08/20 13:58:03 by schouite         ###   ########.fr       */
+/*   Created: 2026/08/20 12:59:12 by schouite          #+#    #+#             */
+/*   Updated: 2026/08/20 17:02:41 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-#include <string>
+#include "HumanB.hpp"
+#include "Weapon.hpp"
+#include <iostream>
 
-class Weapon
+HumanB::HumanB(const std::string &name): _name(name), _weaponPtr(NULL)
+{   
+}
+HumanB::~HumanB()
 {
-    public:
-        Weapon(const std::string &weapon);
-        ~Weapon();
-        const std::string& getType() const;
-        void setType(const std::string &type);
-        void attack(void);
-    private:
-        std::string _weapon;
-       
-};
-#endif
+}
+void HumanB::attack() const
+{
+    std::cout << _name << " attacks with their " << this->_weaponPtr->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+    _weaponPtr = &weapon;
+}

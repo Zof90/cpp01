@@ -6,7 +6,7 @@
 #    By: schouite <schouite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/17 12:00:35 by schouite          #+#    #+#              #
-#    Updated: 2026/08/19 17:02:47 by schouite         ###   ########.fr        #
+#    Updated: 2026/08/20 16:57:34 by schouite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,9 @@ INCLUDES = -Iincludes
 
 ## FILES
 
-CFILES = $(SRC_DIR)/main.cpp $(SRC_DIR)/Weapon.cpp
+CFILES = $(SRC_DIR)/main.cpp $(SRC_DIR)/Weapon.cpp $(SRC_DIR)/HumanA.cpp $(SRC_DIR)/HumanB.cpp
 OFILES = $(CFILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
-HEADER = includes/Weapon.hpp
+HEADER = includes/Weapon.hpp includes/HumanA.hpp includes/HumanB.hpp
 
 ## RULES
 
