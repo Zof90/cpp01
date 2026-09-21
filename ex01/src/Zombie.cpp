@@ -6,7 +6,7 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/17 15:55:41 by schouite          #+#    #+#             */
-/*   Updated: 2026/08/17 16:31:41 by schouite         ###   ########.fr       */
+/*   Updated: 2026/09/21 16:27:01 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Zombie::~Zombie(void)
 }
 void Zombie::announce(void) const
 {
-    std::cout << _name << ":  BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void Zombie::setName(std::string name)

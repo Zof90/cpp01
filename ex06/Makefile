@@ -6,13 +6,13 @@
 #    By: schouite <schouite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/17 12:00:35 by schouite          #+#    #+#              #
-#    Updated: 2026/08/26 12:30:35 by schouite         ###   ########.fr        #
+#    Updated: 2026/09/21 16:35:07 by schouite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## Arguments
 
-NAME = harl
+NAME = harlFilter
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 

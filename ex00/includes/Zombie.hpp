@@ -6,11 +6,13 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 16:17:46 by schouite          #+#    #+#             */
-/*   Updated: 2026/08/14 16:48:05 by schouite         ###   ########.fr       */
+/*   Updated: 2026/09/21 16:23:13 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
+# include <iostream>
 
 class Zombie
 {
@@ -24,3 +26,4 @@ class Zombie
 };
 Zombie	*newZombie(std::string name);
 void	randomChump(std::string name);
+#endif

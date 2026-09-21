@@ -6,7 +6,7 @@
 #    By: schouite <schouite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/11 15:56:54 by schouite          #+#    #+#              #
-#    Updated: 2026/08/18 14:20:00 by schouite         ###   ########.fr        #
+#    Updated: 2026/09/21 16:28:12 by schouite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ clean:
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -r $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
