@@ -6,7 +6,7 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 12:59:12 by schouite          #+#    #+#             */
-/*   Updated: 2026/09/21 16:32:13 by schouite         ###   ########.fr       */
+/*   Updated: 2026/09/21 17:27:09 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ HumanB::~HumanB()
 }
 void HumanB::attack() const
 {
-	if (!this->_weaponPtr->getType())
+	if (!this->_weaponPtr)
 		return ;
 	std::cout << _name << " attacks with their " << this->_weaponPtr->getType() << std::endl;
 }
